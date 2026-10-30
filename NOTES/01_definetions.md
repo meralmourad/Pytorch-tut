@@ -30,7 +30,7 @@ We can match shapes with (_like) `torch.zeros_like(input = )`,`torch.ones_like`,
 ## Notes
 **The default Datatype in tensor is `float_32` unless u specified it and u can change dtype by `tensor.type(new_dtype)`**
 **1 - We can specify also the right device to run the tensors(CPU, GPU)**
-**2 - be careful PyTorch does not allow operations between tensors on different devices directly,So move one to anther with `tensor.to('cpu')` this will move the tensor into the CPU device**
+**2 - be careful Torch does not allow operations between tensors on different devices directly,So move one to anther with `tensor.to('cpu')` this will move the tensor into the CPU device**
 **3 - `requires_grad = True` is to track the gradient for backward propagation**
 
 
@@ -38,4 +38,5 @@ We can match shapes with (_like) `torch.zeros_like(input = )`,`torch.ones_like`,
 **Wrong Data type** 
 **Wrong Tensor shape**
 **Wrong Devices**
+
 

@@ -19,7 +19,7 @@ so 3D Tensor is stack of matrices & 4D Tensor is stack of 3D tensors and so on .
 and the `tensor.ndim`= num of tensors and the `tensor.ndim` = num of tensor + shape of rest (vector , matrix , ten)
 
 **keep in mind**
-![alt text](image.png)
+![alt text](../SRC/image.png)
 
 ## Filling Tensors:
 so we can fill tensors as NumPy random numbers by `torch.rand` 

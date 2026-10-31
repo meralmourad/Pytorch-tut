@@ -28,3 +28,19 @@ before getting in this let's just have a recap on **Dot Product** multiplication
 
 ## Division
 **only element wise, but `A // B` will discard the fraction , but if `AX = B` and u want X use `torch.linalg.solve(A , B)` but it needs only `square matrices`**
+
+# Tensor Aggregation 
+
+**1 - `torch.min(tensor)` or `tensor.min()` same as mix**
+**2 - `torch.mean` must include a tensor in float dtype to not lose the rest of fraction u can write it like `torch.mean(tensor , dtype=torch.float32)` or `tensor.type(torch.float32).mean()` both do not change the org dtype**
+**3 - we all know now `torch.sum(tensor)` or `tensor.sum()`**
+**4 - to find position of min , max use `tensor.argmin` , `tensor.argmax`** 
+
+# Tensor shape
+
+## Reshape
+** `tensor.reshape(dim , size)` it reshapes the tensor but only in a valid ways ` old (dim * elements) = new(dim * elements)` **
+
+### Note that `tensor2 = tensor1.view` is same as reshape but it shares same memory, so change in tensor2 changing tenser1 also
+
+## Stack Tensors

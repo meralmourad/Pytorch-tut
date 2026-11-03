@@ -32,7 +32,7 @@ We can match shapes with (_like) `torch.zeros_like(input = )`,`torch.ones_like`,
 **1 - We can specify also the right device to run the tensors(CPU, GPU)**
 **2 - be careful Torch does not allow operations between tensors on different devices directly,So move one to anther with `tensor.to('cpu')` this will move the tensor into the CPU device**
 **3 - `requires_grad = True` is to track the gradient for backward propagation**
-
+**4 - in DL you must start with fixed seed to control randomness `torch.manual_seed(RANDOM_SEED)`**
 
 # keep in mind most of tensor errors are :
 **Wrong Data type** 

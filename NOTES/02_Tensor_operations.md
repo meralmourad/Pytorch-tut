@@ -43,4 +43,6 @@ before getting in this let's just have a recap on **Dot Product** multiplication
 
 ### Note that `tensor2 = tensor1.view` is same as reshape but it shares same memory, so change in tensor2 changing tenser1 also
 
-## Stack Tensors
+## Squeezing
+**`squeezed = tensor.squeeze()` it removes all dimensions that equal to 1**
+*`Unsqueezed = tensor.unsqueeze(1)` it adds a single dimension for a specific dim* 

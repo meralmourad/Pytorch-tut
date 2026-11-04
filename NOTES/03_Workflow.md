@@ -39,5 +39,22 @@ so you can split data by `train_split = int(.8 * len(X))` which makes **80%** of
 
 **`def forward()`	All nn.Module subclasses require a forward() method, this defines the computation that will take place on the data passed to the particular nn.Module (e.g. the linear regression formula above).**
 
-#### Forward 
-linear Regression `Z = W * X + b` 
+### Forward 
+**`with torch.inference_mode()` context makes just predictions without trigger the `autograd` to track, update, calculate the Parameters**
+So it 
+1- Disables gradient tracking.
+2- Reduces memory consumption.
+3- Makes predictions faster.
+4- Prevents unnecessary computations.
+
+**you can use also `no_grad()` its similar to inference_mode but a bit slower like the `Version Counter`, (counts every time the tensor changed) it still updates in no_grad()  **
+
+**`with` create a block to specific a behavior whenever the block ends Pytorch returns back to its basic behavior**
+
+### Loss / cost Function OR Criterion in different
+A function to measure how model's predictions are to the ideal outputs **lower is Better** 
+**which the training loop is adjusting the parameters to make the loss function smaller**
+
+`MAE = L1` which is the mean absolute error, `MSE = L2`
+            
+![alt text](../SRC/image5.png)

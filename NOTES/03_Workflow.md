@@ -55,6 +55,6 @@ So it
 A function to measure how model's predictions are to the ideal outputs **lower is Better** 
 **which the training loop is adjusting the parameters to make the loss function smaller**
 
-`MAE = L1` which is the mean absolute error, `MSE = L2`
+`MAE = L1` which is the mean absolute error, `MSE = L2` which is the mean squared error
             
 ![alt text](../SRC/image5.png)

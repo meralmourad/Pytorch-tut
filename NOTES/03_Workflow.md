@@ -55,6 +55,26 @@ So it
 A function to measure how model's predictions are to the ideal outputs **lower is Better** 
 **which the training loop is adjusting the parameters to make the loss function smaller**
 
-`MAE = L1` which is the mean absolute error, `MSE = L2` which is the mean squared error
+**Regression** `MAE = L1 = n.L1Loss()` which is the mean absolute error, `MSE = L2 = nn.MSELoss` which is the mean squared error
+**Classification** `nn.BCELoss()`, `nn.CrossEntropyLoss`
             
 ![alt text](../SRC/image5.png)
+
+### Backpropagation
+is used to calculate the gradients of the loss with respect to each trainable parameter by propagating backward through the computational graph.
+
+It determines how sensitive the loss is to each parameter, so we can use these gradients to update the parameters and minimize the error.
+
+### Optimizer
+defines how the model parameters are updated using the calculated gradients based on the loss function.
+
+Different optimization algorithms use different update strategies, such as:
+`SGD`, `Momentum`, `Adam`, `RMSprop`, etc.
+
+For basic **SGD**, the weight update rule is: `W = W - (lr * dW)`
+
+**It is executed through `optimizer.step()`**
+
+**NOTE: Gradients should be reset to zero before calculating new gradients in each training iteration using `optimizer.zero_grad()`.**
+
+

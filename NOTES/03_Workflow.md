@@ -76,5 +76,3 @@ For basic **SGD**, the weight update rule is: `W = W - (lr * dW)`
 **It is executed through `optimizer.step()`**
 
 **NOTE: Gradients should be reset to zero before calculating new gradients in each training iteration using `optimizer.zero_grad()`.**
-
-
